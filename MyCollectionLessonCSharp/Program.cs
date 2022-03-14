@@ -12,17 +12,32 @@ namespace MyCollectionLessonCSharp
     {
         static void Main(string[] args)
         {
-            string[] studentNames = new string[5];
-            WriteLine("Enter students name: ");
-            for(int i = 0;i < studentNames.Length;i++ )
+            int[] numbers = new int[10];
+            Random rnd = new Random();
+
+            for (int i = 0; i <numbers.Length; i++)
             {
-                studentNames[i] = ReadLine();
+                numbers[i] = rnd.Next(1, 100);
+                
             }
 
-            foreach (var studentName in studentNames)
+            foreach (var num in numbers)
             {
-                Write($" |{studentName}");
+                Write($" |{num}");
             }
+
+
+            //string[] studentNames = new string[5];
+            //WriteLine("Enter students name: ");
+            //for(int i = 0;i < studentNames.Length;i++ )
+            //{
+            //    studentNames[i] = ReadLine();
+            //}
+
+            //foreach (var studentName in studentNames)
+            //{
+            //    Write($" |{studentName}");
+            //}
 
 
 
