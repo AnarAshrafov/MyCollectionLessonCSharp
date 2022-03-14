@@ -12,38 +12,83 @@ namespace MyCollectionLessonCSharp
     {
         static void Main(string[] args)
         {
-            //Printing total and average of int array
-            int[] numbers = new int[10];
+            //Sorting of randomly created arrays by pattern
             Random rnd = new Random();
+            int arraySize = rnd.Next(100,200);
+            
+            int[] numbers = new int[arraySize];
 
-            for (int i = 0; i <numbers.Length; i++)
+            int[] newNumbers = new int[numbers.Length];
+
+            for (int i = 0; i < numbers.Length; i++)
             {
-                numbers[i] = rnd.Next(50, 200);
-                
+                numbers[i] = rnd.Next(0,99);
+            }
+
+            int front = 0, rear = newNumbers.Length - 1;
+
+            foreach (var item in numbers)
+            {
+                if (item % 2 == 0)
+                {
+                    newNumbers[front] = item;
+                    front++;
+                }
+                else
+                {
+                    newNumbers[rear] = item;
+                    rear--;
+                }
             }
 
             foreach (var num in numbers)
             {
-                Write($" |{num}");
+                Write($" | {numbers[num]}");
             }
-            Write("|");
-            WriteLine();
-            WriteLine("****************************");
 
-            WriteLine($"Total of numbers: {numbers.Sum()}");
-            WriteLine($"Average of numbers: {numbers.Average()}");
-
-            //Second variant of printing total and average
-            int sum = 0;
-            double avg = 0;
-
-            foreach (var num in numbers)
+            
+            WriteLine("\n**************************\n");
+            WriteLine("\n**************************\n");
+            WriteLine("\n**************************\n");
+            foreach (var num in newNumbers)
             {
-                sum += num;
+                Write($" | {newNumbers[num]}");
             }
-            WriteLine($" Total: {sum}");
-            avg = (double)sum/ numbers.Length;
-            WriteLine($" Average: {avg}");
+
+
+
+            ////Printing total and average of int array
+            //int[] numbers = new int[10];
+            //Random rnd = new Random();
+
+            //for (int i = 0; i <numbers.Length; i++)
+            //{
+            //    numbers[i] = rnd.Next(50, 200);
+
+            //}
+
+            //foreach (var num in numbers)
+            //{
+            //    Write($" |{num}");
+            //}
+            //Write("|");
+            //WriteLine();
+            //WriteLine("****************************");
+
+            //WriteLine($"Total of numbers: {numbers.Sum()}");
+            //WriteLine($"Average of numbers: {numbers.Average()}");
+
+            ////Second variant of printing total and average
+            //int sum = 0;
+            //double avg = 0;
+
+            //foreach (var num in numbers)
+            //{
+            //    sum += num;
+            //}
+            //WriteLine($" Total: {sum}");
+            //avg = (double)sum/ numbers.Length;
+            //WriteLine($" Average: {avg}");
 
 
 
