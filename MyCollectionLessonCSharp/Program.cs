@@ -12,27 +12,42 @@ namespace MyCollectionLessonCSharp
     {
         static void Main(string[] args)
         {
-            int[] numArr = new int[6];
-            numArr[0] = 10;
-            //numArr[2] = 20;
-            numArr[1] = 30;
-            numArr[3] = 40;
-            numArr[4] = 50;
-            numArr[5] = 60;
-            Array.Resize(ref numArr,10);
-
-            WriteLine();
-            foreach (var num in numArr)
+            string[] studentNames = new string[5];
+            WriteLine("Enter students name: ");
+            for(int i = 0;i < studentNames.Length;i++ )
             {
-                Write($" | {numArr[num]}");
+                studentNames[i] = ReadLine();
             }
 
-            for (int i = 0;i < numArr.Length;i++)
+            foreach (var studentName in studentNames)
             {
-                Write($" | {numArr[i]}");
+                Write($" |{studentName}");
             }
 
-            Write(" |\n");
+
+
+
+            //int[] numArr = new int[6];
+            //numArr[0] = 10;
+            ////numArr[2] = 20;
+            //numArr[1] = 30;
+            //numArr[3] = 40;
+            //numArr[4] = 50;
+            //numArr[5] = 60;
+            //Array.Resize(ref numArr,10);
+
+            //WriteLine();
+            //foreach (var num in numArr)
+            //{
+            //    Write($" | {numArr[num]}");
+            //}
+
+            //for (int i = 0;i < numArr.Length;i++)
+            //{
+            //    Write($" | {numArr[i]}");
+            //}
+
+            //Write(" |\n");
 
             ReadKey();
         }
