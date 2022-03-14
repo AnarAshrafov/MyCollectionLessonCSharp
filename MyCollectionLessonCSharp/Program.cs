@@ -17,7 +17,7 @@ namespace MyCollectionLessonCSharp
 
             for (int i = 0; i <numbers.Length; i++)
             {
-                numbers[i] = rnd.Next(1, 100);
+                numbers[i] = rnd.Next(50, 200);
                 
             }
 
@@ -25,6 +25,12 @@ namespace MyCollectionLessonCSharp
             {
                 Write($" |{num}");
             }
+            Write("|");
+            WriteLine();
+            WriteLine("****************************");
+
+            WriteLine($"Total of numbers: {numbers.Sum()}");
+            WriteLine($"Average of numbers: {numbers.Average()}");
 
 
             //string[] studentNames = new string[5];
