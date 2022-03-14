@@ -35,14 +35,14 @@ namespace MyCollectionLessonCSharp
 
             //Second variant of printing total and average
             int sum = 0;
-            int avg = 0;
+            double avg = 0;
 
             foreach (var num in numbers)
             {
                 sum += num;
             }
             WriteLine($" Total: {sum}");
-            avg = sum / numbers.Length;
+            avg = (double)sum/ numbers.Length;
             WriteLine($" Average: {avg}");
 
 
